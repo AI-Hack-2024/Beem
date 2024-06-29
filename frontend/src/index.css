@@ -70,3 +70,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.full-height-map {
+  height: 100vh;
+}
