@@ -8,17 +8,19 @@ const MagicSuggestions = () => {
       id: 1,
       imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png?20220519031949',
-      title: 'Suggested Activity 1',
-      price: '$40/person',
-      statValue: '97.1%',
+      title: 'Activity 1',
+      price: '40',
+      rating: '4.5',
+      statValue: '97.1',
     },
     {
       id: 2,
       imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png?20220519031949',
-      title: 'Suggested Activity 2',
-      price: '$50/person',
-      statValue: '95.5%',
+      title: 'Activity 2',
+      price: '50',
+      rating: '2.7',
+      statValue: '95.5',
     },
   ];
   return (
@@ -43,10 +45,11 @@ const MagicSuggestions = () => {
               imageUrl={item.imageUrl}
               title={item.title}
               price={item.price}
-              statValue={item.statValue}
+              rating={item.rating}
+              matchRate={item.statValue}
             />
           ))}
-          <button className='btn btn-primary px-40'>Select</button>
+          <button className='btn btn-primary px-32'>Select</button>
         </div>
         <form method='dialog' className='modal-backdrop'>
           <button>close</button>

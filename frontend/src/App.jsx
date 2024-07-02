@@ -8,6 +8,7 @@ import Layout from './components/Layout';
 import Activity from './pages/Activity';
 import Groups from './pages/Groups';
 import { Theme } from '@radix-ui/themes';
+import '@smastrom/react-rating/style.css';
 
 function App() {
   return (
