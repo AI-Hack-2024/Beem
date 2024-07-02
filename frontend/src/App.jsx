@@ -6,22 +6,65 @@ import Wallet from './pages/Wallet';
 import Home from './pages/Home';
 import Layout from './components/Layout';
 import Activity from './pages/Activity';
-import Groups from './pages/Groups'
+import Groups from './pages/Groups';
+import { Theme } from '@radix-ui/themes';
 
-function App () {
+function App() {
   return (
-    <>
+    <Theme>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout><Home /></Layout>} />
-          <Route path='/map' element={<Layout><Map /></Layout>} />
-          <Route path='/account' element={<Layout><Account /></Layout>} />
-          <Route path='/wallet' element={<Layout><Wallet /></Layout>} />
-          <Route path='/activity' element={<Layout><Activity /></Layout>} />
-          <Route path='/groups' element={<Layout><Groups /></Layout>} />
+          <Route
+            path='/'
+            element={
+              <Layout>
+                <Home />
+              </Layout>
+            }
+          />
+          <Route
+            path='/map'
+            element={
+              <Layout>
+                <Map />
+              </Layout>
+            }
+          />
+          <Route
+            path='/account'
+            element={
+              <Layout>
+                <Account />
+              </Layout>
+            }
+          />
+          <Route
+            path='/wallet'
+            element={
+              <Layout>
+                <Wallet />
+              </Layout>
+            }
+          />
+          <Route
+            path='/activity'
+            element={
+              <Layout>
+                <Activity />
+              </Layout>
+            }
+          />
+          <Route
+            path='/groups'
+            element={
+              <Layout>
+                <Groups />
+              </Layout>
+            }
+          />
         </Routes>
       </BrowserRouter>
-    </>
+    </Theme>
   );
 }
 
