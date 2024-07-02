@@ -4,6 +4,8 @@ import LeafletControlGeocoder from '../components/LeafletControlGeocoder';
 import LocationCard from '../components/LocationCard';
 import * as HoverCard from '@radix-ui/react-hover-card';
 import Locations from '../lib/locations';
+import MagicSuggestionsButton from '../components/MagicSuggestionsButton';
+import TryBanner from '../components/TryBanner';
 
 const Map = () => {
   const SydneyPosition = [-33.8657, 151.2159];
@@ -22,6 +24,8 @@ const Map = () => {
   return (
     <>
       <h1>THIS IS WORKING</h1>
+      <MagicSuggestionsButton />
+      <TryBanner />
       <MapContainer
         center={SydneyPosition}
         zoom={15}
@@ -40,7 +44,12 @@ const Map = () => {
             position={location.location}
             icon={createCustomIcon(location.icon)}
           >
-            <Popup>{location.name}</Popup>
+            <Popup>
+              <div>
+                <h2>{location.name}</h2>
+                <p>This is a custom popup with React and Leaflet!</p>
+              </div>
+            </Popup>
           </Marker>
         ))}
         <LeafletControlGeocoder />
