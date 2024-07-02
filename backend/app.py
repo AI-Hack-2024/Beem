@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from magic_merge import magic_merge
 from ai_recommender import recommend_locations_rag
-from db import get_user_maps, save_user_maps
+from db import get_user_maps, save_user_maps, find_map_by_name
 
 app = Flask(__name__)
 CORS(app)
@@ -60,7 +60,8 @@ def add_map(username):
 @app.route('/search_map/<username>/<map_name>', methods=['GET'])
 def search_map(username, map_name):
     maps = get_user_maps(username)
-    map_data = maps.get(map_name, None)
+    print(maps)
+    map_data = find_map_by_name(maps, map_name)
     if map_data:
         return jsonify(map_data)
     else:
