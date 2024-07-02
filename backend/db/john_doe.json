@@ -1,0 +1,46 @@
+{
+    "example_map": [
+        {
+            "name": "Place A",
+            "position": [
+                -33.8688,
+                151.2093
+            ],
+            "googleMapsUrl": "https://goo.gl/maps/example1",
+            "addedBy": "User",
+            "transactions": []
+        },
+        {
+            "name": "Place B",
+            "position": [
+                -33.87,
+                151.22
+            ],
+            "googleMapsUrl": "https://goo.gl/maps/example2",
+            "addedBy": "User",
+            "transactions": []
+        }
+    ],
+    "example_map 2": [
+        {
+            "name": "Place A",
+            "position": [
+                -33.8688,
+                151.2093
+            ],
+            "googleMapsUrl": "https://goo.gl/maps/example1",
+            "addedBy": "User",
+            "transactions": []
+        },
+        {
+            "name": "Place B",
+            "position": [
+                -33.87,
+                151.22
+            ],
+            "googleMapsUrl": "https://goo.gl/maps/example2",
+            "addedBy": "User",
+            "transactions": []
+        }
+    ]
+}
