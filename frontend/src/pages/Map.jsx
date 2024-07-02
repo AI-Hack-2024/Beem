@@ -6,6 +6,7 @@ import * as HoverCard from '@radix-ui/react-hover-card';
 import Locations from '../lib/locations';
 import MagicSuggestions from '../components/MagicSuggestions';
 import TryBanner from '../components/TryBanner';
+import LocationInfo from '../components/LocationInfo';
 
 const Map = () => {
   const SydneyPosition = [-33.8657, 151.2159];
@@ -48,7 +49,7 @@ const Map = () => {
               <div>
                 <h2>{location.name}</h2>
                 <p>This is a custom popup with React and Leaflet!</p>
-                <TryBanner />
+                <LocationInfo />
               </div>
             </Popup>
           </Marker>
