@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from magic_merge import magic_merge
+from ai_recommender import recommend_locations_rag
 
 app = Flask(__name__)
 CORS(app)
@@ -27,6 +28,16 @@ def merge_maps():
     )
     
     return jsonify(merged_trip)
+
+@app.route('/recommend_locations', methods=['POST'])
+def recommend():
+    data = request.json
+    map_data = data['map']
+    radius_km = data.get('radius_km', 5)
+    num_recommendations = data.get('num_recommendations', 10)
+    
+    recommendations = recommend_locations_rag(map_data, radius_km, num_recommendations)
+    return jsonify(recommendations)
 
 if __name__ == '__main__':
     app.run(debug=True)
