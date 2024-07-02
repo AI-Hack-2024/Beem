@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import LeafletControlGeocoder from '../components/LeafletControlGeocoder';
-import LocationCard from '../components/LocationCard';
-import * as HoverCard from '@radix-ui/react-hover-card';
 import Locations from '../lib/locations';
 import MagicSuggestions from '../components/MagicSuggestions';
 import TryBanner from '../components/TryBanner';
-import LocationInfo from '../components/LocationInfo';
+import EmojiPicker from '../components/EmojiPicker';
+import LocationCard from '../components/LocationCard';
 
 const Map = () => {
   const SydneyPosition = [-33.8657, 151.2159];
+  const [showLocationCard, setShowLocationCard] = useState(false);
 
   const createCustomIcon = (iconUrl) => {
     return new L.Icon({
@@ -20,13 +20,12 @@ const Map = () => {
     });
   };
 
-  console.log(Locations);
-
   return (
     <>
       <h1>THIS IS WORKING</h1>
       <MagicSuggestions />
       <TryBanner />
+      <LocationCard />
       <MapContainer
         center={SydneyPosition}
         zoom={15}
@@ -48,8 +47,17 @@ const Map = () => {
             <Popup>
               <div>
                 <h2>{location.name}</h2>
-                <p>This is a custom popup with React and Leaflet!</p>
-                <LocationInfo />
+                <div className='dropdown dropdown-top'>
+                  <div tabIndex='0' role='button' className='btn m-1'>
+                    Pick Emoji
+                  </div>
+                  <div
+                    tabindex='0'
+                    className='card compact dropdown-content z-[1]'
+                  >
+                    <EmojiPicker />
+                  </div>
+                </div>
               </div>
             </Popup>
           </Marker>

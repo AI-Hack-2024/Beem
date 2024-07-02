@@ -20,6 +20,7 @@
     "emoji-kitchen-mart": "^6.0.4",
     "leaflet": "^1.9.4",
     "leaflet-control-geocoder": "^2.4.0",
+    "leaflet-geosearch": "^4.0.0",
     "lucide-react": "^0.400.0",
     "react": "^18.3.1",
     "react-daisyui": "^5.0.0",

@@ -3,7 +3,7 @@ const Locations = [
     name: 'Opera Bar',
     location: [-33.85833, 151.21385],
     url: 'https://g.co/kgs/s1UKabU',
-    icon: 'https://emojik.vercel.app/s/1f979_1f617?size=128',
+    icon: 'https://emojik.vercel.app/s/🦪_🍸?size=128',
   },
   {
     name: 'Maybe Sammy',

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import data from '@emoji-mart/data/sets/13.1/native.json';
 import { Picker } from 'emoji-kitchen-mart';
 
-function LocationInfo() {
+function EmojiPicker() {
   useEffect(() => {
     new Picker({
       parent: document.querySelector('#picker'),
@@ -19,4 +19,4 @@ function LocationInfo() {
   );
 }
 
-export default LocationInfo;
+export default EmojiPicker;
