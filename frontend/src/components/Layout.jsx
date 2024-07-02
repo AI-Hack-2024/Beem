@@ -1,10 +1,9 @@
 import Footer from './Footer'
+
 const Layout = ({ children }) => {
   return (
-    <div className="mt-10 bg-off-white">
-      <div className="flex-grow">
-        {children}
-      </div>
+    <div className="bg-off-white min-h-screen">
+      {children}
       <Footer />
     </div>
   )
