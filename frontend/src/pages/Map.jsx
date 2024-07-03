@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
 import LeafletControlGeocoder from '../components/LeafletControlGeocoder';
 import Locations from '../lib/locations';

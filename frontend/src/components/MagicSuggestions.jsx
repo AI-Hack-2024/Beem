@@ -2,30 +2,11 @@ import sparkleImage from '../assets/sparkle.png';
 import SuggestionItem from './SuggestionItem';
 import { useEffect, useState } from 'react';
 import { Spinner } from '@radix-ui/themes';
+import { dummyData, randomiseSuggestions } from '../lib/suggestions';
 
 const MagicSuggestions = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const dummyData = [
-    {
-      id: 1,
-      imageUrl:
-        'https://cdn.broadsheet.com.au/cache/06/8f/068f34892f2ca0958a7cfb990e1cd518.jpg',
-      title: 'Cargo Bar',
-      price: '40',
-      rating: '4.5',
-      statValue: '97.1',
-    },
-    {
-      id: 2,
-      imageUrl: 'https://media.timeout.com/images/106076376/750/422/image.jpg',
-      title: 'Caterpillar Bar',
-      price: '50',
-      rating: '2.7',
-      statValue: '95.5',
-    },
-  ];
 
   useEffect(() => {
     let timer;
@@ -37,6 +18,7 @@ const MagicSuggestions = () => {
     }
     return () => clearTimeout(timer);
   }, [isModalOpen]);
+
 
   return (
     <>
@@ -58,7 +40,7 @@ const MagicSuggestions = () => {
             activities you might like to consider adding to the map
           </p>
           {isLoaded ? (
-            dummyData.map((item) => (
+            randomiseSuggestions(dummyData).map((item) => (
               <SuggestionItem
                 key={item.id}
                 imageUrl={item.imageUrl}

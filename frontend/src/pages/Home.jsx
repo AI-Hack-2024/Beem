@@ -4,31 +4,13 @@ import { useState, useEffect } from 'react';
 import { AlertDialog, Flex, Card, Box, Text, Heading } from '@radix-ui/themes';
 import SuggestionItem from '../components/SuggestionItem';
 import { Spinner } from '@radix-ui/themes';
+import { dummyData, randomiseSuggestions } from '../lib/suggestions';
 
 const Home = () => {
   const [isMergeMap, setIsMergeMap] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
-  const dummyData = [
-    {
-      id: 1,
-      imageUrl:
-        'https://cdn.broadsheet.com.au/cache/06/8f/068f34892f2ca0958a7cfb990e1cd518.jpg',
-      title: 'Cargo Bar',
-      price: '40',
-      rating: '4.5',
-      statValue: '97.1',
-    },
-    {
-      id: 2,
-      imageUrl: 'https://media.timeout.com/images/106076376/750/422/image.jpg',
-      title: 'Caterpillar Bar',
-      price: '50',
-      rating: '2.7',
-      statValue: '95.5',
-    },
-  ];
-
+  console.log(randomiseSuggestions(dummyData));
   useEffect(() => {
     let timer;
     if (isMergeMap) {
@@ -59,7 +41,7 @@ const Home = () => {
           <AlertDialog.Root>
             <AlertDialog.Trigger>
               <Card>
-                <div className='flex flex-col justify-center items-center py-5 text-center'>
+                <div className='flex flex-col justify-center items-center py-6 text-center'>
                   <Box>
                     <Heading as='h2' weight='medium'>
                       Merge maps
@@ -82,7 +64,7 @@ const Home = () => {
                 </div>
               </Card>
             </AlertDialog.Trigger>
-            <AlertDialog.Content maxWidth='450px'>
+            <AlertDialog.Content width='600px'>
               <AlertDialog.Title>Merge maps</AlertDialog.Title>
               <AlertDialog.Description size='2'>
                 Based on{' '}
@@ -97,7 +79,7 @@ const Home = () => {
                 consider adding to the map
                 <div className='space-y-2'>
                   {isLoaded ? (
-                    dummyData.map((item) => (
+                    randomiseSuggestions(dummyData).map((item) => (
                       <div
                         key={item.id}
                         className='flex flex-row gap-2 rounded-2xl'
