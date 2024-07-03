@@ -3,7 +3,7 @@ import { Rating } from '@smastrom/react-rating'
 
 const SuggestionItem = ({ imageUrl, title, price, rating, matchRate }) => {
     return (
-        <div className="card card-side bg-base-100 shadow-xl flex items-center justify-between p-4">
+        <div className="card card-side bg-base-100 shadow-xl flex items-center justify-between p-4 hover:bg-slate-300">
             <figure>
                 <img src={imageUrl} className="w-10" alt="Placeholder" />
             </figure>

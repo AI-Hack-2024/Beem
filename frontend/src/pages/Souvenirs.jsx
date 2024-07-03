@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Souvenirs = () => {
-  return <div>Souvenirs</div>;
+  return (
+    <div>
+      
+    </div>
+  );
 };
 
 export default Souvenirs;
