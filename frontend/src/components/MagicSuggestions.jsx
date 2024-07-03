@@ -23,7 +23,7 @@ const MagicSuggestions = () => {
   return (
     <>
       <button
-        className='btn btn-circle absolute top-60 right-0 z-40'
+        className="btn btn-circle bottom-20 right-6 z-40 fixed"
         onClick={() => {
           document.getElementById('my_modal_2').showModal();
           setIsModalOpen(true);
