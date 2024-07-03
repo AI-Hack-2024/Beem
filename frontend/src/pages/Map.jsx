@@ -22,7 +22,6 @@ const Map = () => {
 
   return (
     <>
-      <h1>THIS IS WORKING</h1>
       <MagicSuggestions />
       <TryBanner />
       <LocationCard />
