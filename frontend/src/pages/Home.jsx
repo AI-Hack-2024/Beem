@@ -13,7 +13,7 @@ const Home = () => {
       id: 1,
       imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png?20220519031949',
-      title: 'Activity 1',
+      title: 'Caterpillar Club',
       price: '40',
       rating: '4.5',
       statValue: '97.1',
@@ -22,7 +22,7 @@ const Home = () => {
       id: 2,
       imageUrl:
         'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png?20220519031949',
-      title: 'Activity 2',
+      title: 'Opera Bar',
       price: '50',
       rating: '2.7',
       statValue: '95.5',
