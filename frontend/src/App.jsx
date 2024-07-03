@@ -10,7 +10,8 @@ import Groups from './pages/Groups';
 import { Theme } from '@radix-ui/themes';
 import '@smastrom/react-rating/style.css';
 import Rewards from './pages/Rewards';
-
+import GroupActivity
+ from './pages/GroupActivity';
 function App() {
   return (
     <Theme>
@@ -69,6 +70,14 @@ function App() {
             element={
               <Layout>
                 <Rewards />
+              </Layout>
+            }
+          />
+          <Route
+            path='/group/:name/:emoji'
+            element={
+              <Layout>
+                <GroupActivity />
               </Layout>
             }
           />
