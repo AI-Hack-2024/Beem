@@ -118,16 +118,16 @@ const Home = () => {
           <Gift />
           <p>rewards</p>
         </button>
-        <button className='flex flex-row gap-2 text-bold text-black bg-button px-2 py-3 text-base justify-center items-center font-semibold hover:text-pink rounded-md'>
+        <button className='flex flex-row gap-2 text-bold text-black bg-button px-2 py-3 text-base justify-center items-center font-semibold hover:text-pink rounded-md' onClick={() => navigate("/action/pay")}>
           pay
         </button>
-        <button className='flex flex-row gap-2 text-bold text-black bg-button px-2 py-3 text-base justify-center items-center font-semibold hover:text-pink rounded-md'>
+        <button className='flex flex-row gap-2 text-bold text-black bg-button px-2 py-3 text-base justify-center items-center font-semibold hover:text-pink rounded-md' onClick={() => navigate("/action/transfer")}>
           transfer
         </button>
-        <button className='flex flex-row gap-2 text-bold text-black bg-button px-2 py-3 text-base justify-center items-center font-semibold hover:text-pink rounded-md'>
+        <button className='flex flex-row gap-2 text-bold text-black bg-button px-2 py-3 text-base justify-center items-center font-semibold hover:text-pink rounded-md' onClick={() => navigate("/action/request")}>
           request
         </button>
-        <button className='flex flex-row gap-2 text-bold text-black bg-button px-2 py-3 text-base justify-center items-center font-semibold hover:text-pink rounded-md'>
+        <button className='flex flex-row gap-2 text-bold text-black bg-button px-2 py-3 text-base justify-center items-center font-semibold hover:text-pink rounded-md' onClick={() => navigate("/action/split")}>
           split
         </button>
       </div>
