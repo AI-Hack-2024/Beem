@@ -53,7 +53,7 @@ const Home = () => {
                     Merge maps
                   </Heading>
                   <Text as='div' size='2'>
-                    I want to merge maps with @joannahe and @wanning.
+                    I want to merge maps with <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>@joannahe</span> and <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>@wanning</span>.
                   </Text>
                   <button className='bg-purple py-2 px-4 rounded-md mt-3 text-sm font-medium text-white'>
                     Begin merging
@@ -65,7 +65,7 @@ const Home = () => {
           <AlertDialog.Content maxWidth='450px'>
             <AlertDialog.Title>Merge maps</AlertDialog.Title>
             <AlertDialog.Description size='2'>
-              Based on @joannahe and @wanning’s past activities, these are some
+              Based on <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>@joannahe</span> and <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>@wanning</span>’s past activities, these are some
               activities you might like to consider adding to the map
               <div className="space-y-2">
               {dummyData.map((item) => (
