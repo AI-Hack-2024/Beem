@@ -1,8 +1,12 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LocationCard = ({ name, imageUrl1, imageUrl2 }) => {
+  const navigate = useNavigate();
   return (
-    <div className='card bg-base-100 w-96 shadow-xl z-40 fixed bottom-16 z-40'>
+    <div
+      className='card bg-base-100 w-96 shadow-xl z-40 fixed bottom-16'
+      onClick={() => navigate('/souvenir')}
+    >
       <div className='flex'>
         <figure className='px-2 pt-2'>
           <img

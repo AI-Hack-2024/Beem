@@ -10,8 +10,10 @@ import Groups from './pages/Groups';
 import { Theme } from '@radix-ui/themes';
 import '@smastrom/react-rating/style.css';
 import Rewards from './pages/Rewards';
-import GroupActivity
- from './pages/GroupActivity';
+import GroupActivity from './pages/GroupActivity';
+import Action from './pages/Actions';
+import Souvenirs from './pages/Souvenirs';
+
 function App() {
   return (
     <Theme>
@@ -78,6 +80,22 @@ function App() {
             element={
               <Layout>
                 <GroupActivity />
+              </Layout>
+            }
+          />
+          <Route
+            path='/action/:action'
+            element={
+              <Layout>
+                <Action />
+              </Layout>
+            }
+          />
+          <Route
+            path='/souvenir'
+            element={
+              <Layout>
+                <Souvenirs />
               </Layout>
             }
           />
