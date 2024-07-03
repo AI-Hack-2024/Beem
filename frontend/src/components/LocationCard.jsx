@@ -4,14 +4,14 @@ const LocationCard = ({ name, imageUrl1, imageUrl2 }) => {
   const navigate = useNavigate();
   return (
     <div
-      className='card bg-base-100 w-96 shadow-xl z-40 fixed bottom-16'
+      className='card bg-base-100 w-96 shadow-xl z-40 fixed bottom-16 p-4'
       onClick={() => navigate('/souvenir')}
     >
       <div className='flex'>
-        <figure className='px-2 pt-2'>
+        <figure className='pt-2'>
           <img src={imageUrl1} alt='Location Image 1' className='rounded-xl' />
         </figure>
-        <figure className='px-2 pt-2'>
+        <figure className='pt-2'>
           <img src={imageUrl2} alt='Location Image 2' className='rounded-xl' />
         </figure>
       </div>

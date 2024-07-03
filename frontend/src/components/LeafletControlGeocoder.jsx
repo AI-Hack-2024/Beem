@@ -10,11 +10,13 @@ export default function LeafletControlGeocoder() {
   const map = useMap();
 
   useEffect(() => {
-    var geocoder = L.Control.Geocoder.nominatim();
+    let geocoder = L.Control.Geocoder.nominatim();
+    let geocoderControl;
+
     if (typeof URLSearchParams !== 'undefined' && location.search) {
       // parse /?geocoder=nominatim from URL
-      var params = new URLSearchParams(location.search);
-      var geocoderString = params.get('geocoder');
+      const params = new URLSearchParams(location.search);
+      const geocoderString = params.get('geocoder');
       if (geocoderString && L.Control.Geocoder[geocoderString]) {
         geocoder = L.Control.Geocoder[geocoderString]();
       } else if (geocoderString) {
@@ -22,14 +24,14 @@ export default function LeafletControlGeocoder() {
       }
     }
 
-    L.Control.geocoder({
+    geocoderControl = L.Control.geocoder({
       query: '',
       placeholder: 'Search here...',
       defaultMarkGeocode: false,
       geocoder,
     })
       .on('markgeocode', function (e) {
-        var latlng = e.geocode.center;
+        const latlng = e.geocode.center;
         L.marker(latlng, { icon })
           .addTo(map)
           .bindPopup(e.geocode.name)
@@ -37,7 +39,11 @@ export default function LeafletControlGeocoder() {
         map.fitBounds(e.geocode.bbox);
       })
       .addTo(map);
-  }, []);
+
+    return () => {
+      map.removeControl(geocoderControl);
+    };
+  }, [map]);
 
   return null;
 }
