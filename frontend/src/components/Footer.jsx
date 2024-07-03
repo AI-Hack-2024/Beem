@@ -11,11 +11,11 @@ const Footer = () => {
       />
       <Ungroup
         className='h-4 w-4 text-black hover:text-pink'
-        onClick={() => navigate('/activity')}
+        onClick={() => console.log('/activity')}
       />
       <Wallet
         className='h-4 w-4 text-black hover:text-pink'
-        onClick={() => navigate('/wallet')}
+        onClick={() => console.log('/wallet')}
       />
       <Users
         className='h-4 w-4 text-black hover:text-pink'
