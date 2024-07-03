@@ -12,7 +12,7 @@ const Action = () => {
         <div className='font-bold flex flex-col'>
             <div className="mb-6 text-6xl text-left">
             Let&apos;s <span className='text-blue'>request $10.00</span> from{' '}
-            <span className='text-blue'>@joannahe</span> from{' '}
+            <span className='text-blue'>@wanning</span> from{' '}
             <span className='text-blue'>sharing the Uber ride with me</span>
           </div>
           <img src={map} className="h-60 w-80"/>
@@ -24,7 +24,7 @@ const Action = () => {
       {action === 'pay' && <div className='font-bold text-left flex flex-col'>
           <div className="mb-10 text-6xl text-left">
             Let&apos;s <span className='text-pink'>pay $10.00</span> to{' '}
-            <span className='text-pink'>@joannahe</span> for{' '}
+            <span className='text-pink'>@wanning</span> for{' '}
             <span className='text-pink'>sharing the Uber ride with me</span>
           </div>
           <img src={map} className="h-60 w-80"/>
