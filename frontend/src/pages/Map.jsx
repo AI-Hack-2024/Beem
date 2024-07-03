@@ -24,6 +24,14 @@ const Map = () => {
     <>
       <MagicSuggestions />
       <TryBanner />
+      <div className='dropdown dropdown-btm z-50'>
+        <div tabIndex='0' role='button' className='btn m-1'>
+          Pick Emoji
+        </div>
+        <div tabindex='0' className='card compact dropdown-content z-[1]'>
+          <EmojiPicker />
+        </div>
+      </div>
       <LocationCard
         imageUrl1='https://www.bestrestaurants.com.au/media/qdwhbgh4/3.jpg?width=1200&quality=80&v=1d80cd939fcb950'
         imageUrl2='https://cdn.broadsheet.com.au/cache/4e/8a/4e8a2a0c7d1e0f109b1d60c42558ec04.jpg'
@@ -42,14 +50,6 @@ const Map = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png'
         />
-        <div className='dropdown dropdown-top'>
-          <div tabIndex='0' role='button' className='btn m-1'>
-            Pick Emoji
-          </div>
-          <div tabindex='0' className='card compact dropdown-content z-[1]'>
-            <EmojiPicker />
-          </div>
-        </div>
         {Locations.map((location) => (
           <Marker
             position={location.location}

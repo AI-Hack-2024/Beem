@@ -2,7 +2,6 @@ import React from 'react';
 import sparkleImage from '../assets/sparkle.png';
 
 const TryBanner = () => {
-  // TODO: Move this to the correct position according to the figma
   return (
     <div className='skeleton inline-flex items-center text-center p-2 z-40'>
       <img src={sparkleImage} alt='Sparkle' className='h-5 w-5 mr-1' />

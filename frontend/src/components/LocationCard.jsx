@@ -9,18 +9,10 @@ const LocationCard = ({ name, imageUrl1, imageUrl2 }) => {
     >
       <div className='flex'>
         <figure className='px-2 pt-2'>
-          <img
-            src={imageUrl1} // First image URL
-            alt='Location Image 1'
-            className='rounded-xl'
-          />
+          <img src={imageUrl1} alt='Location Image 1' className='rounded-xl' />
         </figure>
         <figure className='px-2 pt-2'>
-          <img
-            src={imageUrl2} // Second image URL
-            alt='Location Image 2'
-            className='rounded-xl'
-          />
+          <img src={imageUrl2} alt='Location Image 2' className='rounded-xl' />
         </figure>
       </div>
       <div className=''>
