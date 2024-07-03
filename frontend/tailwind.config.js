@@ -21,6 +21,7 @@ export default {
         blue: '#0F68F6',
         pink: '#FF2369',
         footer: '#FCF9F2',
+        button: '#FAF3EB'
       },
       boxShadow: {
         card: '-0.125rem 0.25rem 0.625rem rgba(0, 0, 0, 0.15)',
