@@ -9,6 +9,7 @@ import Activity from './pages/Activity';
 import Groups from './pages/Groups';
 import { Theme } from '@radix-ui/themes';
 import '@smastrom/react-rating/style.css';
+import Rewards from './pages/Rewards';
 
 function App() {
   return (
@@ -60,6 +61,14 @@ function App() {
             element={
               <Layout>
                 <Groups />
+              </Layout>
+            }
+          />
+          <Route
+            path='/rewards'
+            element={
+              <Layout>
+                <Rewards />
               </Layout>
             }
           />
