@@ -31,8 +31,8 @@ const Map = () => {
   }, [showLocationCard]);
 
   return (
-    <div className="flex flex-col h-screen relative">
-      <div className="flex-none z-10">
+    <div className="flex flex-col h-screen overflow-hidden">
+      <div className="flex-none z-10 w-full">
         <MagicSuggestions />
         <TryBanner />
         <div className="dropdown dropdown-btm z-50">
@@ -45,7 +45,7 @@ const Map = () => {
         </div>
       </div>
       {showLocationCard && (
-        <div className="absolute top-0 left-0 z-20 w-full">
+        <div className="absolute top-0 left-0 z-20 w-full p-8">
           <LocationCard
             imageUrl1='https://www.bestrestaurants.com.au/media/qdwhbgh4/3.jpg?width=1200&quality=80&v=1d80cd939fcb950'
             imageUrl2='https://cdn.broadsheet.com.au/cache/4e/8a/4e8a2a0c7d1e0f109b1d60c42558ec04.jpg'
@@ -53,7 +53,7 @@ const Map = () => {
           />
         </div>
       )}
-      <div className="flex-grow z-0">
+      <div className="flex-grow z-0 w-full">
         <MapContainer
           center={SydneyPosition}
           zoom={15}
