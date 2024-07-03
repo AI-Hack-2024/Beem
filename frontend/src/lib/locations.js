@@ -9,7 +9,7 @@ const Locations = [
     name: 'Maybe Sammy',
     location: [-33.8664, 151.2094],
     url: 'https://g.co/kgs/7q3Z6m',
-    icon: 'https://emojik.vercel.app/s/1f37a?size=128',
+    icon: 'https://emojik.vercel.app/s/1f979_1f632?size=128',
   },
   {
     name: 'The Baxter Inn',

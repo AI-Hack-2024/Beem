@@ -2640,7 +2640,26 @@ react-style-singleton@^2.2.1:
     invariant "^2.2.4"
     tslib "^2.0.0"
 
+<<<<<<< HEAD
 "react@^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0", "react@^16.8 || ^17 || ^18", "react@^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.0.0, react@^18.3.1, react@>=16, react@>=16.8, react@>=16.8.0, react@>=18, "react@16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc":
+=======
+react-swipe-button@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-swipe-button/-/react-swipe-button-1.0.1.tgz#7a57878207475ce1f81946fe035f44f5221012e8"
+  integrity sha512-2+aAujWn3gAiep6swZMXO4aEm+UEbTZxF+mrztN487mvpoR0Ps8TmyPs2uhquA9/4yioh7zZ+OLz2Vqi8WA5Cg==
+
+react-swipeable-button@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/react-swipeable-button/-/react-swipeable-button-1.0.11.tgz#a984483f3a9701458e358feb93054777f84d4572"
+  integrity sha512-fq2AXJb7wNHXezwDh+1B2xikNb9izcZj9kYwoBO3HRXk2s+RoY8xI4wDdswp1AptykxBLf3BeO/epQJQNefAtA==
+
+react-swipeable@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/react-swipeable/-/react-swipeable-7.0.1.tgz#cd299f5986c5e4a7ee979839658c228f660e1e0c"
+  integrity sha512-RKB17JdQzvECfnVj9yDZsiYn3vH0eyva/ZbrCZXZR0qp66PBRhtg4F9yJcJTWYT5Adadi+x4NoG53BxKHwIYLQ==
+
+react@^18.3.1:
+>>>>>>> e1348f69c9dc19f9fae57d517fa984b045ed23b2
   version "18.3.1"
   resolved "https://registry.npmjs.org/react/-/react-18.3.1.tgz"
   integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
