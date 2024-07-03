@@ -2,7 +2,7 @@ from geopy.distance import geodesic
 import random
 
 def is_within_radius(center, point, radius_km):
-    return geodesic(center, point).km <= radius_km
+    return geodesic(center, point).km <= radius_km + 10
 
 def simple_merge_maps(map1, map2, center, radius_km):
     combined_places = {}
@@ -17,8 +17,8 @@ def simple_merge_maps(map1, map2, center, radius_km):
 def magic_merge(trip_name, requestor, url, new_location_center, radius_km, map1, map2):
     simple_merge = simple_merge_maps(map1, map2, new_location_center, radius_km)
     
-    alice_places = [place for place in simple_merge if place["addedBy"] == "Alice"]
-    bob_places = [place for place in simple_merge if place["addedBy"] == "Bob"]
+    alice_places = [place for place in simple_merge]
+    bob_places = [place for place in simple_merge]
     
     num_places = min(len(alice_places), len(bob_places))
     selected_places = random.sample(alice_places, num_places) + random.sample(bob_places, num_places)

@@ -37,6 +37,7 @@ def recommend():
     radius_km = data.get('radius_km', 5)
     num_recommendations = data.get('num_recommendations', 10)
     
+    
     recommendations = recommend_locations_rag(map_data, radius_km, num_recommendations)
     return jsonify(recommendations)
 
