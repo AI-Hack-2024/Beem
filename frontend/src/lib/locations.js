@@ -3,7 +3,7 @@ const Locations = [
     name: 'Opera Bar',
     location: [-33.85833, 151.21385],
     url: 'https://g.co/kgs/s1UKabU',
-    icon: 'https://emojik.vercel.app/s/🦪_🍸?size=128',
+    icon: 'https://emojik.vercel.app/s/1f979_1f620?size=128',
   },
   {
     name: 'Maybe Sammy',
@@ -15,7 +15,7 @@ const Locations = [
     name: 'The Baxter Inn',
     location: [-33.8725, 151.2069],
     url: 'https://g.co/kgs/8Y5v7L',
-    icon: 'https://emojik.vercel.app/s/1f37a?size=128',
+    icon: 'https://emojik.vercel.app/s/1f979_1f626?size=128',
   },
 ];
 
