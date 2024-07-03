@@ -28,10 +28,6 @@ const Action = () => {
 
   return (
     <div className="flex flex-col p-4 align-center justify-center">
-      <div className="top-0 absolute py-2 flex flex-row right-4">
-        <img src={camera} onClick={handleCameraClick} style={{ cursor: 'pointer' }} />
-        <img src={sticker} />
-      </div>
       <dialog id='my_modal_3' className="modal">
         <div className="modal-box flex flex-col justify-center">
           <h3 className="font-bold text-lg">Upload Image</h3>
@@ -58,6 +54,11 @@ const Action = () => {
       </dialog>
       <div className="py-4"></div>
       {action === 'request' && (
+        <>
+        <div className="top-0 absolute py-2 flex flex-row right-4">
+          <img src={camera} onClick={handleCameraClick} style={{ cursor: 'pointer' }} />
+          <img src={sticker} />
+        </div>
         <div className='font-bold flex flex-col'>
           <div className="mb-6 text-6xl text-left">
             Let&apos;s <span className='text-blue'>request $10.00</span> from{' '}
@@ -69,8 +70,14 @@ const Action = () => {
             saved in <span className='text-purple'>#2023_roadtrip</span>
           </div>
         </div>
+        </>
       )}
       {action === 'pay' && (
+        <>
+        <div className="top-0 absolute py-2 flex flex-row right-4">
+          <img src={camera} onClick={handleCameraClick} style={{ cursor: 'pointer' }} />
+          <img src={sticker} />
+        </div>
         <div className='font-bold text-left flex flex-col'>
           <div className="mb-10 text-6xl text-left">
             Let&apos;s <span className='text-pink'>pay $10.00</span> to{' '}
@@ -82,6 +89,7 @@ const Action = () => {
             saved in <span className='text-purple'>#2023_roadtrip</span>
           </div>
         </div>
+        </>
       )}
       <div className="mt-4 w-full max-w-md mx-auto">
         <SwipeableButton 
