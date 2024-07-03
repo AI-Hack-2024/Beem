@@ -17,11 +17,11 @@ def simple_merge_maps(map1, map2, center, radius_km):
 def magic_merge(trip_name, requestor, url, new_location_center, radius_km, map1, map2):
     simple_merge = simple_merge_maps(map1, map2, new_location_center, radius_km)
     
-    alice_places = [place for place in simple_merge]
-    bob_places = [place for place in simple_merge]
+    a_places = [place for place in simple_merge]
+    b_places = [place for place in simple_merge]
     
-    num_places = min(len(alice_places), len(bob_places))
-    selected_places = random.sample(alice_places, num_places) + random.sample(bob_places, num_places)
+    num_places = min(len(a_places), len(b_places))
+    selected_places = random.sample(a_places, num_places) + random.sample(b_places, num_places)
     
     new_location = {
         "name": trip_name,
@@ -39,14 +39,14 @@ map1 = [
         "name": "Place A",
         "position": [-33.8688, 151.2093],
         "googleMapsUrl": "https://goo.gl/maps/example1",
-        "addedBy": "Alice",
+        "addedBy": "a",
         "transactions": []
     },
     {
         "name": "Place B",
         "position": [-33.8700, 151.2200],
         "googleMapsUrl": "https://goo.gl/maps/example2",
-        "addedBy": "Alice",
+        "addedBy": "a",
         "transactions": []
     }
 ]
@@ -56,14 +56,14 @@ map2 = [
         "name": "Place C",
         "position": [-33.8688, 151.2093],
         "googleMapsUrl": "https://goo.gl/maps/example3",
-        "addedBy": "Bob",
+        "addedBy": "b",
         "transactions": []
     },
     {
         "name": "Place D",
         "position": [-33.8650, 151.2150],
         "googleMapsUrl": "https://goo.gl/maps/example4",
-        "addedBy": "Bob",
+        "addedBy": "b",
         "transactions": []
     }
 ]
