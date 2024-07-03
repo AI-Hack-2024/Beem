@@ -12,17 +12,16 @@ const Home = () => {
     {
       id: 1,
       imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png?20220519031949',
-      title: 'Caterpillar Club',
+        'https://cdn.broadsheet.com.au/cache/06/8f/068f34892f2ca0958a7cfb990e1cd518.jpg',
+      title: 'Cargo Bar',
       price: '40',
       rating: '4.5',
       statValue: '97.1',
     },
     {
       id: 2,
-      imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/681px-Placeholder_view_vector.svg.png?20220519031949',
-      title: 'Opera Bar',
+      imageUrl: 'https://media.timeout.com/images/106076376/750/422/image.jpg',
+      title: 'Caterpillar Bar',
       price: '50',
       rating: '2.7',
       statValue: '95.5',
