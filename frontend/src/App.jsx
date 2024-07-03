@@ -13,6 +13,7 @@ import Rewards from './pages/Rewards';
 import GroupActivity from './pages/GroupActivity';
 import Action from './pages/Actions';
 import Souvenirs from './pages/Souvenirs';
+import Success from './pages/Success';
 
 function App() {
   return (
@@ -88,6 +89,14 @@ function App() {
             element={
               <Layout>
                 <Action />
+              </Layout>
+            }
+          />
+          <Route
+            path='/success/:action'
+            element={
+              <Layout>
+                <Success />
               </Layout>
             }
           />
