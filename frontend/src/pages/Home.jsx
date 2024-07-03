@@ -94,7 +94,7 @@ const Home = () => {
               <AlertDialog.Action>
                 <button
                   className='bg-purple py-2 px-4 rounded-md mt-3 text-sm font-medium text-white'
-                  onClick={() => setIsMergeMap(false)}
+                  onClick={() => setIsMergeMap(false) && navigate("/map")}
                 >
                   Select
                 </button>
