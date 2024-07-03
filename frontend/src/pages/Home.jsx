@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom';
-import MasonryLayout from '../components/MasonryLayout';
 import { Gift, Map, ScanLine } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AlertDialog, Flex, Card, Box, Text, Heading } from '@radix-ui/themes';
 import SuggestionItem from '../components/SuggestionItem';
+import { Spinner } from '@radix-ui/themes';
 
 const Home = () => {
   const [isMergeMap, setIsMergeMap] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const navigate = useNavigate();
   const dummyData = [
     {
@@ -28,6 +29,17 @@ const Home = () => {
     },
   ];
 
+  useEffect(() => {
+    let timer;
+    if (isMergeMap) {
+      setIsLoaded(false);
+      timer = setTimeout(() => {
+        setIsLoaded(true);
+      }, 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [isMergeMap]);
+
   return (
     <div className='flex flex-col min-h-screen p-4 align-center justify-center'>
       <div className='absolute top-3 right-4'>
@@ -42,7 +54,7 @@ const Home = () => {
       <h1 className='mt-10 mb-4 text-center text-4xl text-black font-bold'>
         Let&apos;s Beem It
       </h1>
-      <div className="my-8">
+      <div className='my-8'>
         {isMergeMap && (
           <AlertDialog.Root>
             <AlertDialog.Trigger>
@@ -84,21 +96,27 @@ const Home = () => {
                 ’s past activities, these are some activities you might like to
                 consider adding to the map
                 <div className='space-y-2'>
-                  {dummyData.map((item) => (
-                    <div
-                      key={item.id}
-                      className='flex flex-row gap-2 rounded-2xl'
-                    >
-                      <SuggestionItem
+                  {isLoaded ? (
+                    dummyData.map((item) => (
+                      <div
                         key={item.id}
-                        imageUrl={item.imageUrl}
-                        title={item.title}
-                        price={item.price}
-                        rating={item.rating}
-                        matchRate={item.statValue}
-                      />
+                        className='flex flex-row gap-2 rounded-2xl'
+                      >
+                        <SuggestionItem
+                          key={item.id}
+                          imageUrl={item.imageUrl}
+                          title={item.title}
+                          price={item.price}
+                          rating={item.rating}
+                          matchRate={item.statValue}
+                        />
+                      </div>
+                    ))
+                  ) : (
+                    <div className='flex justify-center mb-6'>
+                      <Spinner size='3' />
                     </div>
-                  ))}
+                  )}
                 </div>
               </AlertDialog.Description>
               <Flex gap='3' mt='4' justify='end'>
@@ -166,7 +184,6 @@ const Home = () => {
           split
         </button>
       </div>
-      <MasonryLayout />
     </div>
   );
 };

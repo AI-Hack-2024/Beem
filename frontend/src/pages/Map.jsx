@@ -31,14 +31,14 @@ const Map = () => {
   }, [showLocationCard]);
 
   return (
-    <div className="flex flex-col p-4 align-center justify-center">
+    <div className='flex flex-col p-4 align-center justify-center'>
       <MagicSuggestions />
       <TryBanner />
       <div className='dropdown dropdown-btm z-50'>
         <div tabIndex='0' role='button' className='btn m-1'>
           Pick Emoji
         </div>
-        <div tabindex='0' className='card compact dropdown-content z-[1]'>
+        <div tabIndex='0' className='card compact dropdown-content z-[1]'>
           <EmojiPicker />
         </div>
       </div>
@@ -66,6 +66,7 @@ const Map = () => {
           <Marker
             position={location.location}
             icon={createCustomIcon(location.icon)}
+            key={location.id}
           >
             <Popup>
               <div>
