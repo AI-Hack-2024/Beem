@@ -17,6 +17,13 @@ const Locations = [
     url: 'https://g.co/kgs/8Y5v7L',
     icon: 'https://emojik.vercel.app/s/1f979_1f626?size=128',
   },
+
+  {
+    name: 'Cargo Bar',
+    location: [-33.864, 151.201],
+    url: 'https://g.co/kgs/8Y5v7L',
+    icon: 'https://emojik.vercel.app/s/1f979_1f614?size=128',
+  },
 ];
 
 export default Locations;
