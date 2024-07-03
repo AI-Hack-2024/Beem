@@ -31,7 +31,7 @@ const Map = () => {
   }, [showLocationCard]);
 
   return (
-    <>
+    <div className="flex flex-col p-4 align-center justify-center">
       <MagicSuggestions />
       <TryBanner />
       <div className='dropdown dropdown-btm z-50'>
@@ -76,7 +76,7 @@ const Map = () => {
         ))}
         <LeafletControlGeocoder />
       </MapContainer>
-    </>
+    </div>
   );
 };
 

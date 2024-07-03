@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 const Groups = () => {
   const navigate = useNavigate();
   return (
-    <div className='flex flex-col'>
-      <h1 className="mb-4 font-bold">Groups</h1>
+    <div className='flex flex-col p-4 align-center justify-center'>
+      <h1 className="mb-4 font-bold text-center">Groups</h1>
       <div className='flex flex-col'>
         <Card className="mb-4" onClick={() => navigate('/group/unilectives/nails')}>
           <div className="flex flex-col justify-center items-center py-10 text-center">

@@ -1,11 +1,13 @@
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { Card, Text, Flex } from '@radix-ui/themes';
 import Map from './Map';
+import { ChevronLeft } from 'lucide-react';
 
 const GroupActivity = () => {
   const { name, emoji } = useParams();
   const [filter, setFilter] = useState('balances');
+  const navigate = useNavigate();
 
   const parseEmoji = (emoji) => {
     if (emoji === 'sunglasses') {
@@ -18,9 +20,17 @@ const GroupActivity = () => {
   };
 
   return (
-    <div>
-      <h1 className='text-md font-semibold mb-3'>{name}</h1>
-      <p className='text-6xl mb-2'>{parseEmoji(emoji)}</p>
+    <div className='flex flex-col p-4 align-center justify-center'>
+      <div className='relative flex items-start'>
+        <ChevronLeft
+          className='absolute top-0 left-0 cursor-pointer'
+          onClick={() => navigate('/groups')}
+        />
+        <h1 className='w-full text-md font-semibold mb-3 text-center'>
+          {name}
+        </h1>
+      </div>
+      <p className='text-6xl mb-2 text-center'>{parseEmoji(emoji)}</p>
       <div className='flex flex-row gap-10 justify-center items-center mt-10'>
         <p
           className={`font-medium ${filter === 'balances' ? 'underline' : ''}`}

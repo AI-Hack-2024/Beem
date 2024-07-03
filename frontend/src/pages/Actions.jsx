@@ -7,7 +7,7 @@ const Action = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="flex flex-col p-4 align-center justify-center">
       {action === 'request' && (
         <div className='font-bold flex flex-col'>
             <div className="mb-6 text-6xl text-left">
@@ -16,7 +16,7 @@ const Action = () => {
             <span className='text-blue'>sharing the Uber ride with me</span>
           </div>
           <img src={map} className="h-60 w-80"/>
-          <div className="mt-4 text-left text-4xl">
+          <div className="mt-4 mb-4 text-left text-4xl">
             saved in <span className='text-purple'>#2023_roadtrip</span>
           </div>
         </div>
@@ -28,7 +28,7 @@ const Action = () => {
             <span className='text-pink'>sharing the Uber ride with me</span>
           </div>
           <img src={map} className="h-60 w-80"/>
-          <div className="mt-4 text-left text-4xl">
+          <div className="mt-4 mb-4 text-left text-4xl">
             saved in <span className='text-purple'>#2023_roadtrip</span>
           </div>
         </div>}

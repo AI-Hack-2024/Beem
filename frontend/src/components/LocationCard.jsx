@@ -24,8 +24,8 @@ const LocationCard = ({ name, imageUrl1, imageUrl2 }) => {
           Captured with <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>@joannahe</span>, <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>@wanning</span> at <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>location XYZ</span> on <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>19:00 2021-09-01</span>
         </p>
       </div>
-      <div class='bg-primary text-primary-content rounded-2xl p-4'>
-        <h2 class='card-title py-1'>Thanks for the fun time</h2>
+      <div className='bg-primary text-primary-content rounded-2xl p-4'>
+        <h2 className='card-title py-1'>Thanks for the fun time</h2>
         <p className='text-left'>@joannahe</p>
       </div>
     </div>

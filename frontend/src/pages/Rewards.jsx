@@ -3,7 +3,7 @@ import { Badge, DropdownMenu, Button } from '@radix-ui/themes';
 
 const Rewards = () => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col p-4 align-center justify-center'>
       <div className='text-left'>
         <div className='flex flex-row justify-between'>
           <h2 className='text-md font-semibold'>Popular nearby</h2>
