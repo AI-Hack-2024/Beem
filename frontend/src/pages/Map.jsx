@@ -20,6 +20,16 @@ const Map = () => {
     });
   };
 
+  useEffect(() => {
+    const handleDoubleClick = () => {
+      setShowLocationCard(!showLocationCard);
+    };
+    window.addEventListener('dblclick', handleDoubleClick);
+    return () => {
+      window.removeEventListener('dblclick', handleDoubleClick);
+    };
+  }, [showLocationCard]);
+
   return (
     <>
       <MagicSuggestions />
@@ -32,11 +42,13 @@ const Map = () => {
           <EmojiPicker />
         </div>
       </div>
-      <LocationCard
-        imageUrl1='https://www.bestrestaurants.com.au/media/qdwhbgh4/3.jpg?width=1200&quality=80&v=1d80cd939fcb950'
-        imageUrl2='https://cdn.broadsheet.com.au/cache/4e/8a/4e8a2a0c7d1e0f109b1d60c42558ec04.jpg'
-        name='Opera Bar'
-      />
+      {showLocationCard && (
+        <LocationCard
+          imageUrl1='https://www.bestrestaurants.com.au/media/qdwhbgh4/3.jpg?width=1200&quality=80&v=1d80cd939fcb950'
+          imageUrl2='https://cdn.broadsheet.com.au/cache/4e/8a/4e8a2a0c7d1e0f109b1d60c42558ec04.jpg'
+          name='Opera Bar'
+        />
+      )}
       <MapContainer
         center={SydneyPosition}
         zoom={15}
