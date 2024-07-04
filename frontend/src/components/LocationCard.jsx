@@ -21,12 +21,27 @@ const LocationCard = ({ name, imageUrl1, imageUrl2 }) => {
           <button className='btn btn-primary btn-sm'>View in AR</button>
         </div>
         <p className='text-left py-4'>
-          Captured with <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>@joannahe</span>, <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>@wanning</span> at <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>Lower Concourse, Quay Quarter, Sydney (Australia)</span> on <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>19:00 2021-09-01</span>
+          Captured by{' '}
+          <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>
+            @monanotlisa
+          </span>
+          ,{' '}
+          <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>
+            @migueljmoreno
+          </span>{' '}
+          at{' '}
+          <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>
+            Lower Concourse, Quay Quarter, Sydney (Australia)
+          </span>{' '}
+          on{' '}
+          <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>
+            19:00 2021-09-01
+          </span>
         </p>
       </div>
       <div className='bg-primary text-primary-content rounded-2xl p-4'>
         <h2 className='card-title py-1'>Thanks for the fun time</h2>
-        <p className='text-left'>@joannahe</p>
+        <p className='text-left'>@monanotlisa</p>
       </div>
     </div>
   );

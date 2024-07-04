@@ -49,11 +49,11 @@ const Home = () => {
                     <Text as='div' size='2'>
                       I want to merge maps with{' '}
                       <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>
-                        @joannahe
+                        @monanotlisa
                       </span>{' '}
                       and{' '}
                       <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>
-                        @wanning
+                        @madison447
                       </span>
                       .
                     </Text>
@@ -69,11 +69,11 @@ const Home = () => {
               <AlertDialog.Description size='2'>
                 Based on{' '}
                 <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>
-                  @joannahe
+                  @migueljmoreno, @monanotlisa
                 </span>{' '}
                 and{' '}
                 <span style={{ color: '#6C63FF', fontWeight: 'bold' }}>
-                  @wanning
+                  @madison447
                 </span>
                 ’s past activities, these are some activities you might like to
                 consider adding to the map

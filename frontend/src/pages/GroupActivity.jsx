@@ -71,7 +71,7 @@ const GroupActivity = () => {
             <Card className='mb-4'>
               <div className='flex flex-col justify-center items-center py-2 text-center'>
                 <Flex className='w-full' justify='between'>
-                  <Text>@wanning is square</Text>
+                  <Text>@monanotlisa is square</Text>
                   <Text>$0.00</Text>
                 </Flex>
               </div>
@@ -80,21 +80,6 @@ const GroupActivity = () => {
         )}
         {filter === 'memories' && (
           <div className='flex flex-col'>
-            {/* <p className='font-bold text-sm text-left'>9 May 2023</p>
-            <Card className='mt-4'>
-              <div className='flex flex-col justify-center items-center py-2 text-center'>
-                <Flex className='w-full' justify='between'>
-                  <Text>Brunch with @joannahe @wanning at Speedos Bondi</Text>
-                </Flex>
-              </div>
-            </Card>
-            <Card className='mt-4'>
-              <div className='flex flex-col justify-center items-center py-2 text-center'>
-                <Flex className='w-full' justify='between'>
-                  <Text>Dessert with @joannahe @wanning at Anita Gelato</Text>
-                </Flex>
-              </div>
-            </Card> */}
             <Map />
           </div>
         )}

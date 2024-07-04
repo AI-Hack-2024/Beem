@@ -4,12 +4,12 @@ const Success = () => {
   const { action } = useParams();
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col p-4 align-center justify-center">
+    <div className='flex flex-col p-4 align-center justify-center'>
       <h1 className='text-bold text-6xl font-bold'>
         You have {action === 'request' ? 'requested' : 'paid'}
         <span className='text-purple'> $10.00</span>{' '}
         {action === 'request' ? 'from' : 'to'}{' '}
-        <span className='text-purple'> @wanning </span>for{' '}
+        <span className='text-purple'> @monanotlisa </span>for{' '}
         <span className='text-purple'>sharing the Uber ride with me</span>
       </h1>
       <button

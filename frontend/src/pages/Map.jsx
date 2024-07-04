@@ -31,15 +31,15 @@ const Map = () => {
   }, [showLocationCard]);
 
   return (
-    <div className="flex flex-col h-screen overflow-hidden">
-      <div className="flex-none z-10 w-full flex items-center justify-between p-4">
+    <div className='flex flex-col h-screen overflow-hidden'>
+      <div className='flex-none z-10 w-full flex items-center justify-between p-4'>
         <MagicSuggestions />
-        <div className="flex items-center justify-between w-full gap-10">
-          <div className="dropdown dropdown-btm z-50">
-            <div tabIndex="0" role="button" className="btn m-1">
+        <div className='flex items-center justify-between w-full gap-10'>
+          <div className='dropdown dropdown-btm z-50'>
+            <div tabIndex='0' role='button' className='btn m-1'>
               Pick Emoji
             </div>
-            <div tabIndex="0" className="card compact dropdown-content z-[1]">
+            <div tabIndex='0' className='card compact dropdown-content z-[1]'>
               <EmojiPicker />
             </div>
           </div>
@@ -47,7 +47,7 @@ const Map = () => {
         </div>
       </div>
       {showLocationCard && (
-        <div className="absolute top-0 left-0 z-20 w-full px-6">
+        <div className='absolute top-0 left-0 z-20 w-full px-6'>
           <LocationCard
             imageUrl1='https://www.bestrestaurants.com.au/media/qdwhbgh4/3.jpg?width=1200&quality=80&v=1d80cd939fcb950'
             imageUrl2='https://cdn.broadsheet.com.au/cache/4e/8a/4e8a2a0c7d1e0f109b1d60c42558ec04.jpg'
@@ -55,7 +55,7 @@ const Map = () => {
           />
         </div>
       )}
-      <div className="flex-grow z-0 w-full">
+      <div className='flex-grow z-0 w-full'>
         <MapContainer
           center={SydneyPosition}
           zoom={15}
