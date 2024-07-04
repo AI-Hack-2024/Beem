@@ -23,7 +23,7 @@ const Footer = () => {
       />
       <CircleUserRound
         className='h-4 w-4 text-black hover:text-pink'
-        onClick={() => navigate('/account')}
+        onClick={() => console.log('/account')}
       />
     </div>
   );

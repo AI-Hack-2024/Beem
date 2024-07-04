@@ -10,7 +10,7 @@ import SouvenirItem from '../components/SouvenirItem';
 const Souvenirs = () => {
   return (
     <div className='flex flex-col p-4 align-center justify-center text-left'>
-      <h1 className='text-md font-semibold'>Souvenirs</h1>
+      <h1 className="mb-4 font-bold text-center">Souvenirs</h1>
       <p>Visit more places and perform transactions to gain more souvenirs.</p>
       <p className='mb-10'>Souvenirs are randomly dropped.</p>
       <div className='grid grid-rows-3 grid-cols-2 gap-3 text-center'>
