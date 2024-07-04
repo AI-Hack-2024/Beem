@@ -8,7 +8,5 @@ import 'leaflet-control-geocoder/dist/Control.Geocoder.js';
 import '@radix-ui/themes/styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App />
 );
