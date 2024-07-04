@@ -40,7 +40,7 @@ const LocationCard = ({ name, imageUrl1, imageUrl2 }) => {
         </p>
       </div>
       <div className='bg-primary text-primary-content rounded-2xl p-4'>
-        <h2 className='card-title py-1'>Thanks for the fun time</h2>
+        <h2 className='card-title py-1'>Thanks for the fun time! Your face is so red here 🤣</h2>
         <p className='text-left'>@monanotlisa</p>
       </div>
     </div>
